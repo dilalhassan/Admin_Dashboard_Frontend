@@ -23,7 +23,7 @@ const Add = () => {
   const fetchStudentData = async (id) => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/v1/student/${id}`,
+        `https://admin-dashboard-backend-xcxm.onrender.com/api/v1/student/${id}`,
       );
       setStudentData(response.data.student);
     } catch (error) {
@@ -44,7 +44,7 @@ const Add = () => {
     e.preventDefault();
 
     const response = await axios.post(
-      "http://localhost:3000/api/v1/student/create",
+      "https://admin-dashboard-backend-xcxm.onrender.com/api/v1/student/create",
       studentData,
     );
     navigate("/manage");

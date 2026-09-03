@@ -22,7 +22,7 @@ const Login = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:3000/api/v1/user/login",
+        "https://admin-dashboard-backend-xcxm.onrender.com/api/v1/user/login",
         formData,
       );
       console.log("LOGIN SUCCESS", response.data);

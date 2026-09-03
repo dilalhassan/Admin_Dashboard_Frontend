@@ -12,7 +12,7 @@ const Dashboard = () => {
     }, []);
 
     const fetchStudent = async () => {
-        const response = await axios.get("http://localhost:3000/api/v1/student/getall");
+        const response = await axios.get("https://admin-dashboard-backend-xcxm.onrender.com/api/v1/student/getall");
         setStudents(response.data.students);
     }
 

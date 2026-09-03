@@ -12,7 +12,7 @@ const Manage = () => {
   const fetchStudent = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/student/getall",
+        "https://admin-dashboard-backend-xcxm.onrender.com/api/v1/student/getall",
       );
 
       setStudents(response.data.students);
@@ -27,7 +27,7 @@ const Manage = () => {
 
   const hadndleDelite = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/v1/student/delete/${id}`);
+      await axios.delete(`https://admin-dashboard-backend-xcxm.onrender.com/api/v1/student/delete/${id}`);
       alert("Student Delete Successfully");
       fetchStudent();
     } catch (error) {
